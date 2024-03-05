@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="expenses_array">
+        <item>Food</item>
+        <item>Entertainment</item>
+        <item>Housing</item>
+        <item>Utilities</item>
+        <item>Fuel</item>
+        <item>Automotive</item>
+        <item>Misc</item>
+        <item>Else</item>
+    </string-array>
+</resources>

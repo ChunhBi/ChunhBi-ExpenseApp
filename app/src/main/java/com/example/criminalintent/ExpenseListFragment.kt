@@ -84,8 +84,9 @@ class ExpenseListFragment : Fragment() {
             val newExpense = Expense(
                 id = UUID.randomUUID(),
                 title = "",
+                amount = 0.00f,
                 date = Date(),
-                category = "None"
+                category = 7
             )
             expenseListViewModel.addExpense(newExpense)
             findNavController().navigate(

@@ -28,6 +28,7 @@ class ExpenseRepository private constructor(
         DATABASE_NAME
     )
 //    .createFromAsset(DATABASE_NAME)
+    .fallbackToDestructiveMigration()
     .build()
 
     private val _expenses: MutableStateFlow<List<Expense>> = MutableStateFlow(emptyList())
