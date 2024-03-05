@@ -2,8 +2,48 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/new_crime"
+        android:id="@+id/new_expense"
         android:icon="@drawable/ic_menu_add"
         android:title="@string/new_expense"
         app:showAsAction="ifRoom|withText"/>
+    <item
+        android:id="@+id/all_expense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="All" />
+    <item
+        android:id="@+id/food_expense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Food" />
+    <item
+        android:id="@+id/entertain_expense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Entertainment" />
+    <item
+        android:id="@+id/housing_expense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Housing" />
+    <item
+        android:id="@+id/utilities_expense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Utilities" />
+    <item
+        android:id="@+id/fuel_expense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Fuel" />
+    <item
+        android:id="@+id/automotive_expense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Automotive" />
+    <item
+        android:id="@+id/misc_expense"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:title="Misc" />
 </menu>

@@ -17,7 +17,7 @@ interface ExpenseDao {
     suspend fun getExpense(id: UUID): Expense
 
     @Query("SELECT * FROM expense WHERE category=(:category)")
-    fun getCatExpenses(category: String): Flow<List<Expense>>
+    fun getCatExpenses(category: Int): Flow<List<Expense>>
 
     @Update
     suspend fun updateExpense(expense: Expense)

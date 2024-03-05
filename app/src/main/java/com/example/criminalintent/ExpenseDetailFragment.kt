@@ -1,16 +1,10 @@
 package com.example.criminalintent
 
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.AdapterView
 import android.widget.ArrayAdapter
-import androidx.core.widget.addTextChangedListener
-import androidx.core.widget.doOnTextChanged
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.setFragmentResultListener
 import androidx.fragment.app.viewModels
@@ -23,7 +17,6 @@ import com.example.criminalintent.databinding.FragmentExpenseDetailBinding
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.coroutines.launch
 import java.util.Date
-import kotlin.math.exp
 
 class ExpenseDetailFragment: Fragment() {
     private var _binding: FragmentExpenseDetailBinding? = null
@@ -66,8 +59,9 @@ class ExpenseDetailFragment: Fragment() {
                     // EditText has lost focus
                     val text = expenseAmount.text.toString()
                     try {
+                        text.toFloat()
                         expenseDetailViewModel.updateExpense { oldExpense->
-                            oldExpense.copy(amount = text.toString().toFloat())
+                            oldExpense.copy(amount = text.toFloat())
                         }
                     }
                     catch (e: NumberFormatException) {

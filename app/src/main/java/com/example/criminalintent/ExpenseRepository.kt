@@ -11,7 +11,6 @@ import kotlinx.coroutines.flow.StateFlow
 import kotlinx.coroutines.flow.asStateFlow
 import kotlinx.coroutines.launch
 import java.lang.IllegalStateException
-import java.util.Date
 import java.util.UUID
 
 
@@ -31,11 +30,9 @@ class ExpenseRepository private constructor(
     .fallbackToDestructiveMigration()
     .build()
 
-    private val _expenses: MutableStateFlow<List<Expense>> = MutableStateFlow(emptyList())
-    val expenses : StateFlow<List<Expense>>
-        get() = _expenses.asStateFlow()
-
     fun getExpenses() : Flow<List<Expense>> = database.expenseDao().getExpenses()
+
+    fun getCategorizedExpenses(cat:Int) : Flow<List<Expense>> = database.expenseDao().getCatExpenses(cat)
 
     suspend fun getExpense(id:UUID) : Expense = database.expenseDao().getExpense(id)
 
